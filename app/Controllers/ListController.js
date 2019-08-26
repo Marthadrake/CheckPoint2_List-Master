@@ -3,11 +3,11 @@ import ListService from "../Services/ListService.js";
 //Private
 let _listService = new ListService()
 
-// debugger
+
 
 //TODO Don't forget to render to the screen after every data change.
 function _draw() {
-    let template = ``
+    let template = ""
     let lists = _listService.list
     lists.forEach((list, index) => {
         template += list.getTemplate(index)
@@ -43,16 +43,20 @@ export default class ListController {
         let newChores = form.chores.value
         _listService.addchores(newChores, listIndex)
         _draw()
+        alert("Chores")
     }
 
     deleteList(index) {
         _listService.deleteList(index)
         _draw()
+        alert("Deleted List")
     }
 
     deleteChores(listIndex, choresIndex) {
         _listService.deleteChores(listIndex, choresIndex)
         _draw()
+        alert("Deleted Chores")
     }
+
     //TODO: Your app will need the ability to create, and delete both lists and listItems
 }

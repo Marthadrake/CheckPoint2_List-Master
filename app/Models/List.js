@@ -15,7 +15,10 @@ export default class List {
     }
     getTemplate(index) {
         let template =
-            `
+            `            
+            <div id="rowTwo" class="row justify-content border border-info p-3">
+            <div class="offset-3 col-6 mt-3 border border-danger">
+
             <div>
                 <h1>${this.name}</h1>
                 <h3>${this.kitchen}</h3>
@@ -32,6 +35,8 @@ export default class List {
                 </form>
                 <h3>${this.outdoors}</h3>
                 <button class="btn btn-outline-danger btn-sm" type="button" onclick="app.controllers.listControler.deleteController(${index})">XX</button>
+            </div>
+            </div>
             </div>
             `
         return template
