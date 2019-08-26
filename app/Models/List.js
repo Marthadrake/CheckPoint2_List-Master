@@ -33,7 +33,7 @@ export default class List {
                 </div>
                     <button class="btn btn-outline-primary btn-sm" type="submit">+++</button>
                 </form>
-                <h3>${this.outdoors}</h3>
+                <h3>${this.yard}</h3>
                 <button class="btn btn-outline-danger btn-sm" type="button" onclick="app.controllers.listControler.deleteController(${index})">XX</button>
             </div>
             </div>
