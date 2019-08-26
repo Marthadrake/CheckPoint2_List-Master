@@ -31,7 +31,7 @@ export default class ListController {
         let newList = {
             groceries: form.groceries.value,
             home: form.home.value,
-            outdoors: form.outdoors.value,
+            yard: form.yard.value,
         }
         _listService.addList(newList);
         //NOTE: After updating the store, we can automatically call to draw the lists.

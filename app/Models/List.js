@@ -7,10 +7,10 @@
 export default class List {
     constructor(data) {
         console.log("list from models list")
-        this.name = data.groceries
+        this.groceries = data.groceries
         this.chores = data.chores || []
         this.home = data.home
-        this.outdoors = data.outdoors
+        this.yard = data.yard
 
     }
     getTemplate(index) {
@@ -22,7 +22,7 @@ export default class List {
             <div>
                 <h1>${this.groceries}</h1>
                 <h3>${this.home}</h3>
-                <h3>${this.outdoors}</h3>
+                <h3>${this.yard}</h3>
                 <ul>`
         template += this.drawChores(index)
         template += ` </ul>
