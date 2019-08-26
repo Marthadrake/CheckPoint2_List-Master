@@ -31,8 +31,7 @@ export default class List {
                     </div>
                     <button class="btn btn-outline-primary btn-sm" type="submit">+++</button>
                 </form>
-                <h3>${this.chores}</h3>
-                <button class="btn btn-outline-danger btn-sm" type="submit" onclick="app.controllers.listControler.deleteController(${index})">XX</button>
+                <button class="btn btn-outline-danger btn-sm" type="submit" onclick="app.controllers.listController.deleteController(${index})">XX</button>
             </div>
             </div>
             </div>
@@ -40,7 +39,7 @@ export default class List {
         return template
     }
     drawChores(listIndex) {
-        let choresTemplate = ``
+        let choresTemplate = ""
         this.chores.forEach((c, choresIndex) => {
             choresTemplate += `<li>${c}<span
                 onclick="app.controllers.listController.deleteChores(${listIndex}, ${choresIndex})">XX</span></li>`

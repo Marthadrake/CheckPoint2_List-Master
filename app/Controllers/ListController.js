@@ -2,7 +2,7 @@ import ListService from "../Services/ListService.js";
 
 //Private
 let _listService = new ListService()
-debugger
+
 
 
 //TODO Don't forget to render to the screen after every data change.
