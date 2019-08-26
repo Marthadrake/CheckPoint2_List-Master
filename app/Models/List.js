@@ -8,31 +8,30 @@ export default class List {
     constructor(data) {
         console.log("list from models list")
         this.name = data.name
-        this.size = data.size || null
         this.chores = data.chores || []
-        this.kitchen = data.kitchen || null
-        this.outdoors = data.outdoors || null
+        this.kitchen = data.kitchen
+        this.outdoors = data.outdoors
 
     }
     getTemplate(index) {
         let template =
             `
-            <div class="col-4">
-                <h1></h1>
-                <h3></h3>
-                <h3></h3>
+            <div>
+                <h1>${this.name}</h1>
+                <h3>${this.kitchen}</h3>
+                <h3>${this.outdoors}</h3>
                 <ul>`
         template += this.drawChores(index)
         template += ` </ul>
             <form onsubmit="app.controllers.listController.addList(event, ${index}">
                 <div class="form-group">
-                    <label for="chores">chores</label>
-                    <input type="text" class="form-control" name="chores" placeholder="list chores" required>
+                    <label font-weight-bold mt-3" for="chores">chores</label>
+                    <input type="text" class="form-control font-italic font-weight-bold name="chores" placeholder="list chores" required>
                 </div>
-                    <button type="submit">+++</button>
+                    <button class="btn btn-outline-primary btn-sm" type="submit">+++</button>
                 </form>
                 <h3>${this.outdoors}</h3>
-                <button type="button" onclick="app.controllers.listControler.deleteController(${index})">XX</button>
+                <button class="btn btn-outline-danger btn-sm" type="button" onclick="app.controllers.listControler.deleteController(${index})">XX</button>
             </div>
             `
         return template

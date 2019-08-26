@@ -3,6 +3,8 @@ import ListService from "../Services/ListService.js";
 //Private
 let _listService = new ListService()
 
+// debugger
+
 //TODO Don't forget to render to the screen after every data change.
 function _draw() {
     let template = ``
@@ -27,7 +29,9 @@ export default class ListController {
         event.preventDefault()
         let form = event.target
         let newList = {
-            name: form.name.value
+            name: form.name.value,
+            kitchen: form.kitchen.value,
+            outdoors: form.outdoors.value,
         }
         _listService.addList(newList);
         //NOTE: After updating the store, we can automatically call to draw the lists.

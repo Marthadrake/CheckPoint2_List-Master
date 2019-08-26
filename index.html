@@ -11,13 +11,43 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid bg-info">
+
+        <div class="row p-3">
+            <div class="offset-2 col-8 border border-dark text-center text-black font-weight-bold p-3">TEAM LIST</div>
+        </div>
+
         <form onsubmit="app.controllers.listController.addList(event)">
-            <div class="form-group">
-                <label for="name">Team List</label>
-                <input type="text" class="form-control" name="name" placeholder="list name">
+            <div class="row justify-content border border-info p-3">
+                <div class="ml-2 col-6 mt-3 border border-danger border-top-0 border-right-0">
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="name">Name</label>
+                        <input type="text" class="form-control font-italic font-weight-bold" name="name"
+                            placeholder="name list">
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm mb-2" type="button">submit</button>
+                </div>
             </div>
-            <button class="btn btn-primary" type="submit">submit</button>
+            <div class="row justify-content border border-info p-3">
+                <div class="offset-3 col-6 mt-3 border border-danger border-top-0 border-right-0">
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="name">Kitchen</label>
+                        <input type="text" class="form-control font-italic font-weight-bold" kitchen="kitchen"
+                            placeholder="kitchen list">
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm mb-2" type="button">submit</button>
+                </div>
+            </div>
+            <div class="row justify-content border border-info p-3 mb-2">
+                <div class="offset-5 col-6 mt-3 mb-5 border border-danger">
+                    <div class="form-group">
+                        <label class="font-weight-bold mt-3" for="name">Outdoors</label>
+                        <input type="text" class="form-control font-italic font-weight-bold" outdoors="outdoors"
+                            placeholder="outdoor list">
+                    </div>
+                    <button class="btn btn-outline-dark btn-sm mb-2" type="button">submit</button>
+                </div>
+            </div>
         </form>
         <div id="list" class="row">
 
