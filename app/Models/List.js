@@ -15,11 +15,11 @@ export default class List {
     getTemplate(index) {
         let template =
             `            
-            <div class="row justify-content border border-info p-3">
-            <div class="offset-3 col-6 mt-3 border border-danger">
+        <div class="row justify-content border border-info p-3">
+        <div class="offset-3 col-6 mt-3 border border-danger">
 
             <div>
-                <h1>${this.name}>/h1>
+                <h1>${this.name}></h1>
 
                 <ul>`
         template += this.drawChores(index)
@@ -31,7 +31,7 @@ export default class List {
                     </div>
                     <button class="btn btn-outline-primary btn-sm" type="submit">+++</button>
                 </form>
-                <button class="btn btn-outline-danger btn-sm" type="submit" onclick="app.controllers.listController.deleteController(${index})">XX</button>
+                <button class="btn btn-outline-danger btn-sm" type="submit" onclick="app.controllers.listController.deleteChores(${index})">XX</button>
             </div>
             </div>
             </div>

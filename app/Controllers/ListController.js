@@ -25,8 +25,9 @@ export default class ListController {
         //NOTE: When the app first starts we want to pull any potential data out of memory
         _draw()
     }
-    addlist(event) {
+    addList(event) {
         event.preventDefault()
+
         let form = event.target
         let newList = { name: form.name.value }
 
