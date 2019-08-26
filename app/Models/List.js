@@ -29,9 +29,9 @@ export default class List {
                     <label font-weight-bold mt-3" for="chores">chores</label>
                     <input type="text" class="form-control font-italic font-weight-bold name="chores" placeholder="list chores" required>
                     </div>
-                    <button class="btn btn-outline-primary btn-sm" type="submit">+++</button>
-                </form>
-                <button class="btn btn-outline-danger btn-sm" type="submit" onclick="app.controllers.listController.deleteChores(${index})">XX</button>
+                    </form>
+                    <button class="btn btn-outline-success btn-sm" type="submit" onclick="app.controllers.listContoller.addList(event)">+++</button>
+                <button class="btn btn-outline-danger btn-sm" type="submit" onclick="app.controllers.listController.deleteList(${index})">Delete Chores</button>
             </div>
             </div>
             </div>
@@ -42,7 +42,7 @@ export default class List {
         let choresTemplate = ""
         this.chores.forEach((c, choresIndex) => {
             choresTemplate += `<li>${c}<span
-                onclick="app.controllers.listController.deleteChores(${listIndex}, ${choresIndex})">XX</span></li>`
+                onclick="app.controllers.listController.addChores(${listIndex}, ${choresIndex})">Add Chores</span></li>`
         });
         return choresTemplate
     }
