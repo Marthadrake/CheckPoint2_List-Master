@@ -7,9 +7,9 @@
 export default class List {
     constructor(data) {
         console.log("list from models list")
-        this.name = data.name
+        this.name = data.groceries
         this.chores = data.chores || []
-        this.kitchen = data.kitchen
+        this.home = data.home
         this.outdoors = data.outdoors
 
     }
@@ -20,8 +20,8 @@ export default class List {
             <div class="offset-3 col-6 mt-3 border border-danger">
 
             <div>
-                <h1>${this.name}</h1>
-                <h3>${this.kitchen}</h3>
+                <h1>${this.groceries}</h1>
+                <h3>${this.home}</h3>
                 <h3>${this.outdoors}</h3>
                 <ul>`
         template += this.drawChores(index)
