@@ -2,7 +2,7 @@ import ListService from "../Services/ListService.js";
 
 //Private
 let _listService = new ListService()
-
+debugger
 
 
 //TODO Don't forget to render to the screen after every data change.
@@ -28,12 +28,8 @@ export default class ListController {
     addlist(event) {
         event.preventDefault()
         let form = event.target
-        let newList = {
-            name: form.name.value,
-            groceries: form.groceries.value,
-            home: form.home.value,
-            yard: form.yard.value,
-        }
+        let newList = { name: form.name.value }
+
         _listService.addList(newList);
         //NOTE: After updating the store, we can automatically call to draw the lists.
         _draw()
@@ -42,6 +38,7 @@ export default class ListController {
         event.preventDefault()
         let form = event.target
         let newChores = form.chores.value
+
         _listService.addchores(newChores, listIndex)
         _draw()
         alert("Chores")
