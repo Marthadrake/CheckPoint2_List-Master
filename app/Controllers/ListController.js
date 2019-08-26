@@ -29,6 +29,7 @@ export default class ListController {
         event.preventDefault()
         let form = event.target
         let newList = {
+            name: form.name.value,
             groceries: form.groceries.value,
             home: form.home.value,
             yard: form.yard.value,

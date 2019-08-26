@@ -7,6 +7,7 @@
 export default class List {
     constructor(data) {
         console.log("list from models list")
+        this.name = data.name
         this.groceries = data.groceries
         this.chores = data.chores || []
         this.home = data.home
@@ -20,6 +21,7 @@ export default class List {
             <div class="offset-3 col-6 mt-3 border border-danger">
 
             <div>
+                <h1>${this.name}>/h1>
                 <h1>${this.groceries}</h1>
                 <h3>${this.home}</h3>
                 <h3>${this.yard}</h3>
